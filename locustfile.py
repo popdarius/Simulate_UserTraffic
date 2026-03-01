@@ -1,7 +1,7 @@
 
 from locust import HttpUser, task, between
 
-# ---- Custom metrics storage ----
+#Custom metrics storage
 login_failures = 0
 slow_requests = 0
 
@@ -60,4 +60,5 @@ class ReqResUser(HttpUser):
                 response.failure("No token returned")
 
             else:
+
                 response.success()
